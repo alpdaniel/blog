@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <article>
+    <h1>{{ article.title }}</h1>
+    <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+    {{ article.content }}
+  </article>
+{% endblock %}

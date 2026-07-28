@@ -1,0 +1,194 @@
+:root {
+  --link: #004040;
+  zoom: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 850px;
+  margin: 5px auto 80px;
+  padding: 0 5px;
+  font: 18px/1.4 sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 24px;
+}
+
+nav {
+  display: flex;
+  gap: 1.2rem;
+}
+
+a {
+  color: var(--link);
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+header > a {
+  font-weight: bold;
+}
+
+.post-list {
+  margin-top: 30px;
+}
+
+.post-year {
+  margin-bottom: 40px;
+}
+
+.post-year-label {
+  position: relative;
+  left: -80px;
+  top: 30px;
+  height: 0;
+  margin-bottom: 20px;
+  font: 12px sans-serif;
+}
+
+.post-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  width: 370px;
+  color: inherit;
+  font: 14px sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.post-card img {
+  border: 1px solid;
+  object-fit: cover;
+}
+
+.post-card:hover {
+  text-decoration: underline;
+}
+
+article {
+  max-width: 85ch;
+  margin-top: 3.5rem;
+}
+
+h1 {
+  margin: 0 0 0.2rem;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+p {
+  margin: 0.65rem 0;
+}
+
+time {
+  display: block;
+  margin-bottom: 2rem;
+  opacity: 0.6;
+}
+
+code {
+  color: var(--link);
+  font-size: 0.8em;
+}
+
+:not(pre) > code {
+  padding: 0.05em 0.25em;
+  border: 1px solid #d7c8b5;
+}
+
+@media (max-width: 930px) {
+  .post-card {
+    width: 100%;
+  }
+
+  .post-year-label {
+    top: -20px;
+    left: 0;
+    font-size: 14px;
+  }
+
+  .post-year:first-child .post-year-label {
+    display: none;
+  }
+}
+
+@font-face {
+  font-family: "New Computer Modern Math";
+  src: url("../fonts/NewCMMath-Regular.otf");
+}
+
+math {
+  font-family: "New Computer Modern Math", math;
+}
+
+mtable.aligned mtd:nth-child(odd) {
+  justify-items: end;
+  text-align: right;
+}
+
+mtable.cases mtd,
+mtable.aligned mtd:nth-child(even) {
+  justify-items: start;
+  text-align: left;
+}
+
+mtable.cases mtd,
+mtable.aligned mtd {
+  padding-inline: 0;
+}
+
+mtable {
+  math-style: inherit;
+}
+
+mtd {
+  math-depth: auto-add;
+  math-style: compact;
+  math-shift: compact;
+}
+
+mtable.multiline-equation mtd {
+  padding: 0;
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+}
+
+math > mtable.multiline-equation mtr:not(:last-child) mtd {
+  padding-bottom: 0.5em;
+}
+
+mfrac {
+  margin-inline: 0.1em;
+  padding-inline: 0;
+}
+
+munder > :nth-child(2),
+munderover > :nth-child(2) {
+  math-shift: compact;
+}
+
+munder[accentunder="true" i] > :not(:first-child) {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+}
+
+math[display="block"] {
+  display: block;
+  margin: 1em 0;
+  overflow-x: auto;
+  text-align: center;
+}

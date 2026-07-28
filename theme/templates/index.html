@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="post-list">
+    {% for year, articles in articles|groupby('date.year')|reverse %}
+      <div class="post-year">
+        <div class="post-year-label">{{ year }}</div>
+        {% for article in articles %}
+          <a class="post-card" href="{{ SITEURL }}/{{ article.url }}">
+            <img src="{{ SITEURL }}/images/{{ article.image }}" alt="" width="100" height="50">
+            {{ article.title }}
+          </a>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
