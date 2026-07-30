@@ -1,6 +1,5 @@
-:root {
-  --link: #004040;
-  zoom: 1.5;
+html {
+  zoom: 1.2;
 }
 
 * {
@@ -16,8 +15,8 @@ body {
 
 header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  height: 24px;
 }
 
 nav {
@@ -25,18 +24,20 @@ nav {
   gap: 1.2rem;
 }
 
-a {
-  color: var(--link);
+a,
+code {
+  color: #004040;
 }
 
-header a {
+nav a {
   color: inherit;
   text-decoration: none;
   opacity: 0.6;
 }
 
-header > a {
-  font-weight: bold;
+.site-logo img {
+  display: block;
+  object-fit: contain;
 }
 
 .post-list {
@@ -53,7 +54,7 @@ header > a {
   top: 30px;
   height: 0;
   margin-bottom: 20px;
-  font: 12px sans-serif;
+  font-size: 12px;
 }
 
 .post-card {
@@ -62,7 +63,7 @@ header > a {
   gap: 20px;
   width: 370px;
   color: inherit;
-  font: 14px sans-serif;
+  font-size: 14px;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -99,7 +100,6 @@ time {
 }
 
 code {
-  color: var(--link);
   font-size: 0.8em;
 }
 
@@ -138,14 +138,12 @@ mtable.aligned mtd:nth-child(odd) {
   text-align: right;
 }
 
-mtable.cases mtd,
-mtable.aligned mtd:nth-child(even) {
+:is(mtable.cases mtd, mtable.aligned mtd:nth-child(even)) {
   justify-items: start;
   text-align: left;
 }
 
-mtable.cases mtd,
-mtable.aligned mtd {
+:is(mtable.cases, mtable.aligned) mtd {
   padding-inline: 0;
 }
 
@@ -161,6 +159,12 @@ mtd {
 
 mtable.multiline-equation mtd {
   padding: 0;
+}
+
+:is(
+  mtable.multiline-equation mtd,
+  munder[accentunder="true" i] > :not(:first-child)
+) {
   math-depth: inherit;
   math-style: inherit;
   math-shift: inherit;
@@ -175,15 +179,8 @@ mfrac {
   padding-inline: 0;
 }
 
-munder > :nth-child(2),
-munderover > :nth-child(2) {
+:is(munder, munderover) > :nth-child(2) {
   math-shift: compact;
-}
-
-munder[accentunder="true" i] > :not(:first-child) {
-  math-depth: inherit;
-  math-style: inherit;
-  math-shift: inherit;
 }
 
 math[display="block"] {

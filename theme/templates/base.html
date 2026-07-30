@@ -4,11 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ SITENAME }}</title>
+  <link rel="icon" type="image/png" href="{{ SITEURL }}/images/soap.jpg">
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/site.css">
 </head>
 <body>
   <header>
-    <a href="{{ SITEURL }}/">{{ SITENAME }}</a>
+    <a class="site-logo" href="{{ SITEURL }}/" aria-label="{{ SITENAME }}">
+      <img src="{{ SITEURL }}/images/soap.jpg" alt="" width="80" height="80">
+    </a>
     <nav><a href="{{ SITEURL }}/about/">about</a><a href="{{ SITEURL }}/">blog</a></nav>
   </header>
   {% block content %}{% endblock %}
