@@ -126,7 +126,8 @@ code {
 
 @font-face {
   font-family: "New Computer Modern Math";
-  src: url("../fonts/NewCMMath-Regular.otf");
+  src: url("../fonts/NewCMMath-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 math {
