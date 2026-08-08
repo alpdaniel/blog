@@ -37,7 +37,6 @@ nav a {
 
 .site-logo img {
   display: block;
-  object-fit: contain;
 }
 
 .post-list {
@@ -132,56 +131,6 @@ code {
 
 math {
   font-family: "New Computer Modern Math", math;
-}
-
-mtable.aligned mtd:nth-child(odd) {
-  justify-items: end;
-  text-align: right;
-}
-
-:is(mtable.cases mtd, mtable.aligned mtd:nth-child(even)) {
-  justify-items: start;
-  text-align: left;
-}
-
-:is(mtable.cases, mtable.aligned) mtd {
-  padding-inline: 0;
-}
-
-mtable {
-  math-style: inherit;
-}
-
-mtd {
-  math-depth: auto-add;
-  math-style: compact;
-  math-shift: compact;
-}
-
-mtable.multiline-equation mtd {
-  padding: 0;
-}
-
-:is(
-  mtable.multiline-equation mtd,
-  munder[accentunder="true" i] > :not(:first-child)
-) {
-  math-depth: inherit;
-  math-style: inherit;
-  math-shift: inherit;
-}
-
-math > mtable.multiline-equation mtr:not(:last-child) mtd {
-  padding-bottom: 0.5em;
-}
-
-mfrac {
-  margin-inline: 0.1em;
-  padding-inline: 0;
-}
-
-:is(munder, munderover) > :nth-child(2) {
-  math-shift: compact;
 }
 
 math[display="block"] {

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{{ SITENAME }}</title>
-		<link rel="icon" type="image/webp" href="{{ SITEURL }}/images/soap.webp">
-		<link rel="stylesheet" href="{{ SITEURL }}/theme/css/site.css">
-	</head>
-	<body>
-		<header>
-			<a class="site-logo" href="{{ SITEURL }}/" aria-label="{{ SITENAME }}">
-				<img src="{{ SITEURL }}/images/soap.webp" alt="" width="80" height="80">
-			</a>
-			<nav><a href="{{ SITEURL }}/about/">about</a><a href="{{ SITEURL }}/">blog</a></nav>
-		</header>
-		{% block content %}{% endblock %}
-	</body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ SITENAME }}</title>
+  <link rel="icon" href="{{ SITEURL }}/images/soap.webp">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/site.css">
+</head>
+<body>
+  <header>
+    <a class="site-logo" href="{{ SITEURL }}/" aria-label="{{ SITENAME }}">
+      <img src="{{ SITEURL }}/images/soap.webp" alt="" width="80" height="80">
+    </a>
+    <nav><a href="{{ SITEURL }}/about/">about</a><a href="{{ SITEURL }}/">blog</a></nav>
+  </header>
+  {% block content %}{% endblock %}
+</body>
 </html>
